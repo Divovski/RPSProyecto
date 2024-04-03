@@ -12,6 +12,15 @@
             return choices[Math.floor(Math.random() * 3)];
         }
 
+        let playerSelection = prompt('Enter rock, paper or scissors');
+        if (!['rock', 'paper', 'scissors'].includes(playerSelection)) {
+            alert("Invalid input! Please enter only 'rock', 'paper' or 'scissors'");
+            location.reload();
+        }
+
+        function playRound(playerSelection,getComputerChoice) {
+            
+        }
 
 
 
