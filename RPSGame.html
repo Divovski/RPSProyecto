@@ -14,7 +14,7 @@
 
         let playerSelection = prompt('Enter rock, paper or scissors');
         if (!['rock', 'paper', 'scissors'].includes(playerSelection)) {
-            alert("Invalid input! Please enter only 'rock', 'paper' or 'scissors'");
+            alert("Lo escribiste mal pon solo 'rock', 'paper' o 'scissors'");
             location.reload();
         }
 
@@ -27,13 +27,14 @@
             else if (getComputerChoice === 'rock' && playerSelection === 'scissors' || getComputerChoice === 'paper' && playerSelection === 'rock' || getComputerChoice === 'scissors' && playerSelection === 'paper') {
                 console.log('Has perdido, gana el pc con '+getComputerChoice+', vuelve a jugar otra vez chico/a perdedor(a) jejej.')
             } 
-                
-            
+
             }
+
 
         let  computerChoice = getComputerChoice();
 
         playRound(playerSelection,computerChoice);
+        location.reload();
 
 
 
