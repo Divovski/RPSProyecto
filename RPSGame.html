@@ -19,10 +19,21 @@
         }
 
         function playRound(playerSelection,getComputerChoice) {
+            if  (playerSelection === getComputerChoice) {
+                console.log('Es un empate, Vuelvan a jugar!.');
+            }else if (playerSelection === 'rock' && getComputerChoice === 'scissors' || playerSelection === 'paper' && getComputerChoice === 'rock' || playerSelection === 'scissors' && getComputerChoice === 'paper') {
+                console.log('Gana el jugador con ' +playerSelection);
+            }
+            else if (getComputerChoice === 'rock' && playerSelection === 'scissors' || getComputerChoice === 'paper' && playerSelection === 'rock' || getComputerChoice === 'scissors' && playerSelection === 'paper') {
+                console.log('Has perdido, gana el pc con '+getComputerChoice+', vuelve a jugar otra vez chico/a perdedor(a) jejej.')
+            } 
+                
             
-        }
+            }
 
+        let  computerChoice = getComputerChoice();
 
+        playRound(playerSelection,computerChoice);
 
 
 
